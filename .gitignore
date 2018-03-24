@@ -1,0 +1,11 @@
+*.bin
+*.eep
+*.elf
+*.lss
+*.map
+*.o
+*~
+*.aux
+*.log
+*.out
+dep/
