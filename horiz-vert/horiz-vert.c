@@ -60,6 +60,8 @@ void Level_drawColumn(LEVEL *l, uint8_t x, uint16_t y, int16_t realX)
   uint8_t tx = x % VRAM_TILES_H;
 
   for (uint8_t i = 0; i < VRAM_TILES_V - 2; ++i) {
+    if ((y + i) > l->height - 1)
+      break;
     uint16_t index = (y + i) * l->width + realX;
     SetTile(tx, (y + i) % VRAM_TILES_V, Level_getTileAt(l, index));
   }
@@ -79,6 +81,8 @@ void Level_drawRow(LEVEL *l, uint16_t x, uint8_t y, int16_t realY)
   uint8_t ty = y % VRAM_TILES_V;
 
   for (uint8_t i = 0; i < VRAM_TILES_H - 2; ++i) {
+    if ((x + i) > l->width - 1)
+      break;
     uint16_t index = realY * l->width + (x + i);
     SetTile((x + i) % VRAM_TILES_H, ty, Level_getTileAt(l, index));
   }
