@@ -1,0 +1,36 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>Uzebox Mode 3 with Scrolling Guide</title>
+</head>
+<body>
+
+<h1>Uzebox Mode 3 with Scrolling Guide</h1>
+
+<p><a href="uzebox_mode3_scrolling.pdf">Here is a comprehensive guide</a> I wrote for the Uzebox on how to use
+video mode 3 with scrolling in three different configurations:
+  <ul>
+    <li>Horizontal Scrolling</li>
+    <li>Vertical Scrolling</li>
+    <li>Horizontal & Vertical Scrolling</li>
+  </ul>
+This is something that I wish existed back when I first started
+developing on the Uzebox.</p>
+
+<p>It includes diagrams to help explain the relationship between VRAM,
+the screen, and your level data, and it walks the reader through
+writing the code for each different scrolling configuration line by
+line, explaining things as much as possible. The scrolling is
+bi-directional, it only loads data for a row and/or column when
+absolutely necessary, always loads the tiles into the hidden areas of
+VRAM, and it allows you to scroll the screen by up to 8 pixels per
+call to the Camera_update function.</p>
+
+<p>It doesn't cover everything, but it should be a pretty good start
+for people who want to learn how to use this video mode.</p>
+
+<p>There are full projects available for all the examples in the guide
+in its <a href="https://github.com/artcfox/uzebox-mode-3-with-scrolling-guide">git repository</a>.</p>
+
+</body>
+</html> 
